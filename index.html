@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Anton|Lobster|patua+One&display+swap">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Abril+Fatface|Anton|Lobster|patua+One&display+swap">
     <link rel="stylesheet" href="style.css">
+    <script src="JS/script.js"></script>
     <title>Web Development Bootcamp</title>
 </head>
 
@@ -69,10 +71,16 @@
                     libero architecto autem accusamus nemo praesentium neque
                     dolorem ,facilis maxime assumenda. Illo?
                 </p>
+                <button onclick="changeContent()">Know More</button>
+                <p id="more">Lorum ipsum, dolor sit amet consectetur adipisicing elit.
+                    Eveniest,nobis. Velit, ab ipsum et ratione porro sed hic
+                    libero architecto autem accusamus nemo praesentium neque
+                    dolorem ,facilis maxime assumenda</p>
+
             </div>
         </div>
     </section>
-
+    
     <section id="slogan">
         <div class="container">
             <div class="slogan">
@@ -83,23 +91,27 @@
 
     <section id="forms">
         <div class="container">
-            <form style="text-align: center; justify-content: center;">
+            <form style="text-align: center; justify-content: center;" onsubmit="return formvalidation()">
                 <div class="group">
                     <label>Name</label>
-                    <input type="text">
+                    <input id="name-input" type="text">
+                    <p id="name-validation">Enter name !</p>
                 </div>
                 <div class="group">
                     <label>Email</label>
-                    <input type="email">
+                    <input id="email-input" type="email">
+                    <p id="email-validation">Enter email !</p>
                 </div>
                 <div class="group">
                     <label>Batch</label>
-                    <select>
+                    <select id="batch-input">
                         <option>2k20</option>
                         <option>2k19</option>
                         <option>2k18</option>
                         <option>2k17</option>
+                        <option>none</option>
                     </select>
+                    <p id="batch-validation">Select batch !</p>
                 </div>
                 <input type="submit">
             </form>
