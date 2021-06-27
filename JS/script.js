@@ -27,7 +27,7 @@ function formvalidation(){
         document.getElementById("batch-validation").style.display="block";
     }
 
-    if((x|y|z)=="")
+    if((x||y)==""||(z=="none"))
     {
         return false;
     }
